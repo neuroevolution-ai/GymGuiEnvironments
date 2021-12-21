@@ -1,9 +1,16 @@
 from gym.envs.registration import register
 
 register(
-    id='DummyApp-v0',
-    entry_point='gym_gui_environments.envs:DummyApp',
-    timestep_limit=1000,
-    reward_threshold=100.0,
-    nondeterministic = True,
+    id="PySideGUI-v0",
+    entry_point="gym_gui_environments.pyside_gui_environments:GUIEnv"
+)
+
+register(
+    id="PySideGUIRandomClick-v0",
+    entry_point="gym_gui_environments.pyside_gui_environments:GUIEnvRandomClick"
+)
+
+register(
+    id="PySideGUIRandomWidget-v0",
+    entry_point="gym_gui_environments.pyside_gui_environments:GUIEnvRandomWidget"
 )
