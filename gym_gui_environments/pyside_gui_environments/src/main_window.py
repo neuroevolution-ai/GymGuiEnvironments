@@ -12,15 +12,17 @@ from PySide6.QtTest import QTest
 from PySide6.QtWidgets import QApplication, QMainWindow, QMenuBar, QWidget, QComboBox
 from coverage import Coverage
 
-from envs.gui_env.src.backend.calculator import Calculator
-from envs.gui_env.src.backend.car_configurator import (CarConfigurator, show_disabled_cars_error_dialog,
-                                                       show_car_configuration_dialog)
-from envs.gui_env.src.backend.figure_printer import FigurePrinter, toggle_figure_printer_widgets
-from envs.gui_env.src.backend.text_printer import TextPrinter
-from envs.gui_env.src.settings_dialog import SettingsDialog
-from envs.gui_env.src.utils.paint_event_filter import PaintEventFilter
-from envs.gui_env.src.utils.utils import load_ui, do_nothing_function
-from envs.gui_env.window_configuration import WINDOW_SIZE
+from gym_gui_environments.pyside_gui_environments.src.backend.calculator import Calculator
+from gym_gui_environments.pyside_gui_environments.src.backend.car_configurator import (CarConfigurator,
+                                                                                       show_disabled_cars_error_dialog,
+                                                                                       show_car_configuration_dialog)
+from gym_gui_environments.pyside_gui_environments.src.backend.figure_printer import (FigurePrinter,
+                                                                                     toggle_figure_printer_widgets)
+from gym_gui_environments.pyside_gui_environments.src.backend.text_printer import TextPrinter
+from gym_gui_environments.pyside_gui_environments.src.settings_dialog import SettingsDialog
+from gym_gui_environments.pyside_gui_environments.src.utils.paint_event_filter import PaintEventFilter
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import load_ui, do_nothing_function
+from gym_gui_environments.pyside_gui_environments.window_configuration import WINDOW_SIZE
 
 
 class MainWindow(QMainWindow):
@@ -30,11 +32,11 @@ class MainWindow(QMainWindow):
                  random_click_probability: float = None, random_seed: int = None, **kwargs):  # pragma: no cover
         super().__init__(**kwargs)
 
-        self.setWindowTitle("test-gui-worldmodels")
+        self.setWindowTitle("test-gui-worldmodels")  # TODO change
         self.setFixedSize(*WINDOW_SIZE)
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.main_window = load_ui("envs/gui_env/src/main_window.ui")
+        self.main_window = load_ui("gym_gui_environments/pyside_gui_environments/src/main_window.ui")
 
         self._initialize()
 

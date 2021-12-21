@@ -2,9 +2,9 @@ from PySide6.QtCore import Slot
 from PySide6.QtGui import QColorConstants, QColor, QPalette
 from PySide6.QtWidgets import QComboBox, QAbstractButton, QPlainTextEdit
 
-from envs.gui_env.src.backend.ascii_art import CHRISTMAS_TREE, GUITAR, SPACE_SHIP, HOUSE
-from envs.gui_env.src.utils.alert_dialogs import MissingContentDialog
-from envs.gui_env.src.utils.utils import SignalHandler
+from gym_gui_environments.pyside_gui_environments.src.backend.ascii_art import CHRISTMAS_TREE, GUITAR, SPACE_SHIP, HOUSE
+from gym_gui_environments.pyside_gui_environments.src.utils.alert_dialogs import MissingContentDialog
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import SignalHandler
 
 
 class FigurePrinter:

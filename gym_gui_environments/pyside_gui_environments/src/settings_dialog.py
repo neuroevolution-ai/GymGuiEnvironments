@@ -4,13 +4,16 @@ from functools import partial
 from PySide6.QtCore import Slot, Signal, Qt
 from PySide6.QtWidgets import QDialog, QApplication, QGridLayout
 
-from envs.gui_env.src.backend.calculator import (NUMERAL_SYSTEMS, Calculator, show_missing_operators_error,
-                                                 show_division_by_zero_error)
-from envs.gui_env.src.backend.car_configurator import CarConfigurator
-from envs.gui_env.src.backend.figure_printer import (FigurePrinter, show_missing_figures_error,
-                                                     toggle_figure_printer_settings)
-from envs.gui_env.src.backend.text_printer import TextPrinter, WORD_COUNTS, FONT_SIZES, FONTS, GreenColorEventFilter
-from envs.gui_env.src.utils.utils import load_ui
+from gym_gui_environments.pyside_gui_environments.src.backend.calculator import (NUMERAL_SYSTEMS, Calculator,
+                                                                                 show_missing_operators_error,
+                                                                                 show_division_by_zero_error)
+from gym_gui_environments.pyside_gui_environments.src.backend.car_configurator import CarConfigurator
+from gym_gui_environments.pyside_gui_environments.src.backend.figure_printer import (FigurePrinter,
+                                                                                     show_missing_figures_error,
+                                                                                     toggle_figure_printer_settings)
+from gym_gui_environments.pyside_gui_environments.src.backend.text_printer import (TextPrinter, WORD_COUNTS, FONT_SIZES,
+                                                                                   FONTS, GreenColorEventFilter)
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import load_ui
 
 
 class SettingsDialog(QDialog):
@@ -24,7 +27,7 @@ class SettingsDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.settings_dialog = load_ui("envs/gui_env/src/settings_dialog.ui")
+        self.settings_dialog = load_ui("gym_gui_environments/pyside_gui_environments/src/settings_dialog.ui")
         self.layout = QGridLayout(self)
         self.layout.addWidget(self.settings_dialog, 1, 1)
         self.setLayout(self.layout)

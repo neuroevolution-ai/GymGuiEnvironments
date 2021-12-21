@@ -20,6 +20,11 @@
        itself
     * `GUIEnvRandomClick` does not require an action, it always chooses a random click (so random coordinates)
 - Example code for a random monkey tester:
+
+```python
+# TODO fix examples with gym.make syntax
+```
+
 ```python
 import time
 

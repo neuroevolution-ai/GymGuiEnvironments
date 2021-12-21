@@ -1,8 +1,8 @@
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import QLCDNumber, QComboBox
 
-from envs.gui_env.src.utils.alert_dialogs import WarningDialog, MissingContentDialog
-from envs.gui_env.src.utils.utils import SignalHandler
+from gym_gui_environments.pyside_gui_environments.src.utils.alert_dialogs import WarningDialog, MissingContentDialog
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import SignalHandler
 
 POSSIBLE_OPERANDS_BASE_10 = [i for i in range(5)]  # pragma: no cover
 POSSIBLE_OPERANDS_BASE_2 = [bin(i) for i in range(5)]  # pragma: no cover

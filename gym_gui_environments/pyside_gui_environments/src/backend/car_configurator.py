@@ -1,8 +1,8 @@
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import QFrame, QComboBox, QPushButton
 
-from envs.gui_env.src.utils.alert_dialogs import WarningDialog
-from envs.gui_env.src.utils.utils import SignalHandler
+from gym_gui_environments.pyside_gui_environments.src.utils.alert_dialogs import WarningDialog
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import SignalHandler
 
 CAR_MODELS = ["Car A", "Car B", "Car C"]  # pragma: no cover
 

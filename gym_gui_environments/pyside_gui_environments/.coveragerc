@@ -4,11 +4,11 @@ cover_pylib = False
 branch = False
 
 source =
-    envs/gui_env/src/backend
+    gym_gui_environments/pyside_gui_environments/src/backend
 
 omit =
-    envs/gui_env/src/*__init__*
-    envs/gui_env/src/backend/ascii_art.py
+    gym_gui_environments/pyside_gui_environments/src/backend/__init__.py
+    gym_gui_environments/pyside_gui_environments/src/backend/ascii_art.py
 
 [report]
 exclude_lines =

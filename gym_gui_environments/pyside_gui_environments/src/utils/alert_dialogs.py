@@ -3,7 +3,7 @@ from typing import List
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QGridLayout
 
-from envs.gui_env.src.utils.utils import load_ui
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import load_ui
 
 
 class MissingContentDialog(QDialog):
@@ -13,7 +13,7 @@ class MissingContentDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui("envs/gui_env/src/utils/missing_content_dialog.ui")
+        self.dialog = load_ui("gym_gui_environments/pyside_gui_environments/src/utils/missing_content_dialog.ui")
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)
@@ -39,7 +39,7 @@ class WarningDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui("envs/gui_env/src/utils/warning_dialog.ui")
+        self.dialog = load_ui("gym_gui_environments/pyside_gui_environments/src/utils/warning_dialog.ui")
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)
@@ -61,7 +61,7 @@ class ConfirmationDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui("envs/gui_env/src/utils/confirmation_dialog.ui")
+        self.dialog = load_ui("gym_gui_environments/pyside_gui_environments/src/utils/confirmation_dialog.ui")
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)

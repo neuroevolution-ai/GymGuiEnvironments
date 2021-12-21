@@ -12,9 +12,9 @@ from PySide6.QtCore import QThread, Signal, Slot, QTimer, Qt, QElapsedTimer
 from PySide6.QtWidgets import QApplication
 from coverage import Coverage
 
-from envs.gui_env.src.utils.paint_event_filter import PaintEventFilter
-from envs.gui_env.src.utils.utils import take_screenshot
-from envs.gui_env.window_configuration import WINDOW_SIZE
+from gym_gui_environments.pyside_gui_environments.src.utils.paint_event_filter import PaintEventFilter
+from gym_gui_environments.pyside_gui_environments.src.utils.utils import take_screenshot
+from gym_gui_environments.pyside_gui_environments.window_configuration import WINDOW_SIZE
 
 
 LAST_STEP_TIMEOUT = 100
@@ -138,9 +138,10 @@ class GUIEnv(gym.Env):
                            screenshot_connection_child: Connection, generate_html_report: bool):
 
         # data_suffix appends process id to the database file which is needed when this environment is run in parallel
-        coverage_measurer = Coverage(data_suffix=True, config_file="envs/gui_env/.coveragerc")
+        coverage_measurer = Coverage(data_suffix=True,
+                                     config_file="gym_gui_environments/pyside_gui_environments/.coveragerc")
         coverage_measurer.start()
-        from envs.gui_env.src.main_window import MainWindow
+        from gym_gui_environments.pyside_gui_environments.src.main_window import MainWindow
         coverage_measurer.stop()
 
         self.paint_event_filter = PaintEventFilter()

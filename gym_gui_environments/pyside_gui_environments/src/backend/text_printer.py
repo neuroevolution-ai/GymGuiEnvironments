@@ -2,7 +2,7 @@ from PySide6.QtCore import Slot, QObject, QEvent
 from PySide6.QtGui import QTextDocument, QPalette, QColorConstants, QFontDatabase
 from PySide6.QtWidgets import QPlainTextEdit, QAbstractButton, QRadioButton
 
-from envs.gui_env.src.utils.alert_dialogs import ConfirmationDialog
+from gym_gui_environments.pyside_gui_environments.src.utils.alert_dialogs import ConfirmationDialog
 
 TEXT_50_WORDS = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet 
