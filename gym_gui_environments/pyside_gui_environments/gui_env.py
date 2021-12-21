@@ -1,3 +1,4 @@
+import glob
 import logging
 import multiprocessing as mp
 import os
@@ -249,6 +250,11 @@ class GUIEnv(gym.Env):
         self._stop_application_process()
 
         logging.debug("Closed application process, closing environment now")
+
+        # Delete the temporary files used by coverage.py for the measurement
+        coverage_files = glob.glob(".coverage*")
+        for _file in coverage_files:
+            os.remove(_file)
 
         super().close()
 
