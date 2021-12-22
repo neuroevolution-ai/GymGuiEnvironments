@@ -144,7 +144,7 @@ class GUIEnv(gym.Env):
 
         # data_suffix appends process id to the database file which is needed when this environment is run in parallel
         coverage_measurer = Coverage(data_suffix=True,
-                                     config_file=coveragerc_file_path)
+                                     config_file=coveragerc_file_path.__str__())
         coverage_measurer.start()
         from gym_gui_environments.pyside_gui_environments.src.main_window import MainWindow
         coverage_measurer.stop()
