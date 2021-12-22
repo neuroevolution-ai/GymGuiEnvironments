@@ -1,3 +1,4 @@
+import importlib.resources
 import logging
 from functools import partial
 
@@ -27,7 +28,9 @@ class SettingsDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.settings_dialog = load_ui("gym_gui_environments/pyside_gui_environments/src/settings_dialog.ui")
+        settings_dialog_ui_file_path = importlib.resources.files(
+            "gym_gui_environments.pyside_gui_environments.src").joinpath("settings_dialog.ui")
+        self.settings_dialog = load_ui(settings_dialog_ui_file_path.__str__())
         self.layout = QGridLayout(self)
         self.layout.addWidget(self.settings_dialog, 1, 1)
         self.setLayout(self.layout)

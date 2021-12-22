@@ -1,4 +1,5 @@
 import glob
+import importlib.resources
 import logging
 import multiprocessing as mp
 import os
@@ -138,9 +139,12 @@ class GUIEnv(gym.Env):
     def _start_application(self, click_connection_child: Connection, terminate_connection_child: Connection,
                            screenshot_connection_child: Connection, generate_html_report: bool):
 
+        coveragerc_file_path = importlib.resources.files(
+            "gym_gui_environments.pyside_gui_environments").joinpath(".coveragerc")
+
         # data_suffix appends process id to the database file which is needed when this environment is run in parallel
         coverage_measurer = Coverage(data_suffix=True,
-                                     config_file="gym_gui_environments/pyside_gui_environments/.coveragerc")
+                                     config_file=coveragerc_file_path)
         coverage_measurer.start()
         from gym_gui_environments.pyside_gui_environments.src.main_window import MainWindow
         coverage_measurer.stop()
