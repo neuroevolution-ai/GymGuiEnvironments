@@ -7,9 +7,6 @@ from PySide6.QtWidgets import QDialog, QGridLayout
 from gym_gui_environments.pyside_gui_environments.src.utils.utils import load_ui
 
 
-UI_FILES_BASE_PATH = importlib.resources.files("gym_gui_environments.pyside_gui_environments.src.utils")
-
-
 class MissingContentDialog(QDialog):
 
     def __init__(self, warning_text: str, content: List[str], **kwargs):
@@ -17,7 +14,11 @@ class MissingContentDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui(UI_FILES_BASE_PATH.joinpath("missing_content_dialog.ui").__str__())
+        with importlib.resources.path(
+                "gym_gui_environments.pyside_gui_environments.src.utils", "missing_content_dialog.ui") as resource:
+            dialog_ui_file_path = resource.__str__()
+
+        self.dialog = load_ui(dialog_ui_file_path)
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)
@@ -43,7 +44,11 @@ class WarningDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui(UI_FILES_BASE_PATH.joinpath("warning_dialog.ui").__str__())
+        with importlib.resources.path(
+                "gym_gui_environments.pyside_gui_environments.src.utils", "warning_dialog.ui") as resource:
+            dialog_ui_file_path = resource.__str__()
+
+        self.dialog = load_ui(dialog_ui_file_path)
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)
@@ -65,7 +70,11 @@ class ConfirmationDialog(QDialog):
 
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        self.dialog = load_ui(UI_FILES_BASE_PATH.joinpath("confirmation_dialog.ui").__str__())
+        with importlib.resources.path(
+                "gym_gui_environments.pyside_gui_environments.src.utils", "confirmation_dialog.ui") as resource:
+            dialog_ui_file_path = resource.__str__()
+
+        self.dialog = load_ui(dialog_ui_file_path)
         self.layout = QGridLayout()
         self.layout.addWidget(self.dialog, 1, 1)
         self.setLayout(self.layout)

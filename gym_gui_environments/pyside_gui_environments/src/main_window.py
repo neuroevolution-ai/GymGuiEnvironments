@@ -37,9 +37,10 @@ class MainWindow(QMainWindow):
         self.setFixedSize(*WINDOW_SIZE)
         self.setWindowFlag(Qt.FramelessWindowHint, True)
 
-        main_window_ui_file_path = importlib.resources.files(
-            "gym_gui_environments.pyside_gui_environments.src").joinpath("main_window.ui")
-        self.main_window = load_ui(main_window_ui_file_path.__str__())
+        with importlib.resources.path("gym_gui_environments.pyside_gui_environments.src", "main_window.ui") as resource:
+            main_window_ui_file_path = resource.__str__()
+
+        self.main_window = load_ui(main_window_ui_file_path)
 
         self._initialize()
 
