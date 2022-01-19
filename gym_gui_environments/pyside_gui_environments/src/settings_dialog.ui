@@ -90,7 +90,7 @@
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="red_text_color_button">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -106,7 +106,7 @@
              </attribute>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="green_text_color_button">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -126,7 +126,7 @@
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="blue_text_color_button">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -142,7 +142,7 @@
              </attribute>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="black_text_color_button">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -167,7 +167,7 @@
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
+         <item alignment="Qt::AlignLeft">
           <widget class="QCheckBox" name="bold_font_checkbox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -180,7 +180,7 @@
            </property>
           </widget>
          </item>
-         <item>
+         <item alignment="Qt::AlignLeft">
           <widget class="QCheckBox" name="italic_font_checkbox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -193,7 +193,7 @@
            </property>
           </widget>
          </item>
-         <item>
+         <item alignment="Qt::AlignLeft">
           <widget class="QCheckBox" name="underline_font_checkbox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -225,7 +225,7 @@
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="addition_checkbox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -241,7 +241,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="multiplication_checkbox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -258,7 +258,7 @@
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_8">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="subtraction_checkbox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -274,7 +274,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="division_checkbox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -329,7 +329,7 @@
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_16">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="tire_20_inch_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -345,7 +345,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="tire_22_inch_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -365,7 +365,7 @@
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_14">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="tire_18_inch_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -381,7 +381,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="tire_19_inch_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -413,7 +413,7 @@
          <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,0">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_17">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="modern_interior_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -429,7 +429,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="vintage_interior_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -449,7 +449,7 @@
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_18">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="sport_interior_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -465,7 +465,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="dummy_checkbox_interior">
               <property name="enabled">
                <bool>false</bool>
@@ -497,7 +497,7 @@
          <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="10,0">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_19">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="combustion_engine_a_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -513,7 +513,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="combustion_engine_b_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -529,7 +529,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="combustion_engine_c_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -549,7 +549,7 @@
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_20">
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="electric_motor_a_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -565,7 +565,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="electric_motor_b_checkbox">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -581,7 +581,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QCheckBox" name="dummy_checkbox_electric_motor">
               <property name="enabled">
                <bool>false</bool>
@@ -615,7 +615,7 @@
        <string>Figure Printer</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_9">
-       <item>
+       <item alignment="Qt::AlignLeft">
         <widget class="QCheckBox" name="activate_figure_printer_checkbox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -632,7 +632,7 @@
         <layout class="QHBoxLayout" name="horizontalLayout_5">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="christmas_tree_checkbox">
              <property name="enabled">
               <bool>false</bool>
@@ -651,7 +651,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="guitar_checkbox">
              <property name="enabled">
               <bool>false</bool>
@@ -671,7 +671,7 @@
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_10">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="space_ship_checkbox">
              <property name="enabled">
               <bool>false</bool>
@@ -687,7 +687,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QCheckBox" name="house_checkbox">
              <property name="enabled">
               <bool>false</bool>
@@ -711,7 +711,7 @@
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_11">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="green_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
@@ -730,7 +730,7 @@
              </attribute>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="blue_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
@@ -753,7 +753,7 @@
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_12">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="black_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
@@ -775,7 +775,7 @@
              </attribute>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QRadioButton" name="brown_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
@@ -820,7 +820,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="tree_color_button_group"/>
   <buttongroup name="text_color_button_group"/>
+  <buttongroup name="tree_color_button_group"/>
  </buttongroups>
 </ui>
