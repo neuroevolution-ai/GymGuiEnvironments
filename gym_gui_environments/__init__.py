@@ -1,3 +1,5 @@
+__version__ = "0.0.2"
+
 from gym.envs.registration import register
 
 register(
