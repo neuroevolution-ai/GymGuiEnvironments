@@ -61,7 +61,14 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="number_of_words_combobox"/>
+          <widget class="QComboBox" name="number_of_words_combobox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -85,6 +92,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
             <widget class="QRadioButton" name="red_text_color_button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Red</string>
              </property>
@@ -95,6 +108,12 @@
            </item>
            <item>
             <widget class="QRadioButton" name="green_text_color_button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Green</string>
              </property>
@@ -109,6 +128,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QRadioButton" name="blue_text_color_button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Blue</string>
              </property>
@@ -119,6 +144,12 @@
            </item>
            <item>
             <widget class="QRadioButton" name="black_text_color_button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Black</string>
              </property>
@@ -138,6 +169,12 @@
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
           <widget class="QCheckBox" name="bold_font_checkbox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Bold</string>
            </property>
@@ -145,6 +182,12 @@
          </item>
          <item>
           <widget class="QCheckBox" name="italic_font_checkbox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Italic</string>
            </property>
@@ -152,6 +195,12 @@
          </item>
          <item>
           <widget class="QCheckBox" name="underline_font_checkbox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Underline</string>
            </property>
@@ -178,6 +227,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
             <widget class="QCheckBox" name="addition_checkbox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Addition</string>
              </property>
@@ -188,6 +243,12 @@
            </item>
            <item>
             <widget class="QCheckBox" name="multiplication_checkbox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Multiplication</string>
              </property>
@@ -199,6 +260,12 @@
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
             <widget class="QCheckBox" name="subtraction_checkbox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Subtraction</string>
              </property>
@@ -209,6 +276,12 @@
            </item>
            <item>
             <widget class="QCheckBox" name="division_checkbox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Division</string>
              </property>
@@ -258,6 +331,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_16">
             <item>
              <widget class="QCheckBox" name="tire_20_inch_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>20 Inch Tire</string>
               </property>
@@ -268,6 +347,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="tire_22_inch_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>22 Inch Tire</string>
               </property>
@@ -282,6 +367,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_14">
             <item>
              <widget class="QCheckBox" name="tire_18_inch_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>18 Inch Tire</string>
               </property>
@@ -292,6 +383,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="tire_19_inch_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>19 Inch Tire</string>
               </property>
@@ -318,6 +415,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_17">
             <item>
              <widget class="QCheckBox" name="modern_interior_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Modern Interior</string>
               </property>
@@ -328,6 +431,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="vintage_interior_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Vintage Interior</string>
               </property>
@@ -342,6 +451,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_18">
             <item>
              <widget class="QCheckBox" name="sport_interior_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Sport Interior</string>
               </property>
@@ -354,6 +469,12 @@
              <widget class="QCheckBox" name="dummy_checkbox_interior">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
               <property name="text">
                <string>CheckBox</string>
@@ -378,6 +499,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_19">
             <item>
              <widget class="QCheckBox" name="combustion_engine_a_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Combustion Engine A</string>
               </property>
@@ -388,6 +515,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="combustion_engine_b_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Combustion Engine B</string>
               </property>
@@ -398,6 +531,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="combustion_engine_c_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Combustion Engine C</string>
               </property>
@@ -412,6 +551,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_20">
             <item>
              <widget class="QCheckBox" name="electric_motor_a_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Electric Motor A</string>
               </property>
@@ -422,6 +567,12 @@
             </item>
             <item>
              <widget class="QCheckBox" name="electric_motor_b_checkbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Electric Motor B</string>
               </property>
@@ -432,6 +583,15 @@
             </item>
             <item>
              <widget class="QCheckBox" name="dummy_checkbox_electric_motor">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>CheckBox</string>
               </property>
@@ -457,6 +617,12 @@
       <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
         <widget class="QCheckBox" name="activate_figure_printer_checkbox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
           <string>Activate Figure Printer</string>
          </property>
@@ -471,6 +637,12 @@
              <property name="enabled">
               <bool>false</bool>
              </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Christmas Tree</string>
              </property>
@@ -483,6 +655,12 @@
             <widget class="QCheckBox" name="guitar_checkbox">
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="text">
               <string>Guitar</string>
@@ -498,6 +676,12 @@
              <property name="enabled">
               <bool>false</bool>
              </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Space Ship</string>
              </property>
@@ -507,6 +691,12 @@
             <widget class="QCheckBox" name="house_checkbox">
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="text">
               <string>House</string>
@@ -526,6 +716,12 @@
              <property name="enabled">
               <bool>false</bool>
              </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Green</string>
              </property>
@@ -538,6 +734,12 @@
             <widget class="QRadioButton" name="blue_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="text">
               <string>Blue</string>
@@ -556,6 +758,12 @@
              <property name="enabled">
               <bool>false</bool>
              </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Black</string>
              </property>
@@ -571,6 +779,12 @@
             <widget class="QRadioButton" name="brown_figure_color_button">
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="text">
               <string>Brown</string>
