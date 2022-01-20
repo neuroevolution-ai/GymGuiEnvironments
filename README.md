@@ -6,6 +6,16 @@ Install directly from GitHub using `pip`:
 pip install git+https://github.com/neuroevolution-ai/GymGuiEnvironments.git#egg=gym_gui_environments
 ```
 
+### Requirements
+
+Make sure that the following fonts are installed system-wide (test with `fc-match "FONT_NAME"` on Linux-based 
+systems):
+
+```
+"DejaVu Sans", "Liberation Mono", "Nimbus Roman", "Ubuntu"
+```
+
+
 # Usage
 
 Import this package alongside `gym` and the environments are automatically registered and can be used with `gym.make`:

@@ -66,7 +66,7 @@ WORD_COUNTS = [50, 100, 200, 400]  # pragma: no cover
 
 FONT_SIZES = [12, 14, 16, 18, 20]  # pragma: no cover
 
-FONTS = ["DejaVu Sans", "Liberation Mono", "Noto Sans", "Terminus"]  # pragma: no cover
+FONTS = ["DejaVu Sans", "Liberation Mono", "Nimbus Roman", "Ubuntu"]  # pragma: no cover
 
 
 class TextPrinter:
@@ -118,10 +118,10 @@ class TextPrinter:
             self.font_name = "DejaVu Sans"
         elif font == "Liberation Mono":
             self.font_name = "Liberation Mono"
-        elif font == "Noto Sans":
-            self.font_name = "Noto Sans"
-        elif font == "Terminus":
-            self.font_name = "Terminus"
+        elif font == "Nimbus Roman":
+            self.font_name = "Nimbus Roman"
+        elif font == "Ubuntu":
+            self.font_name = "Ubuntu"
 
         assert self.font_name in FONTS
 
@@ -193,10 +193,10 @@ class TextPrinter:
             font_family = "DejaVu Sans"
         elif self.font_name == "Liberation Mono":
             font_family = "Liberation Mono"
-        elif self.font_name == "Noto Sans":
-            font_family = "Noto Sans"
-        elif self.font_name == "Terminus":
-            font_family = "Terminus"
+        elif self.font_name == "Nimbus Roman":
+            font_family = "Nimbus Roman"
+        elif self.font_name == "Ubuntu":
+            font_family = "Ubuntu"
         assert font_family
 
         color = None
