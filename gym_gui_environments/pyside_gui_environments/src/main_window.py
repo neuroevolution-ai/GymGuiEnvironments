@@ -267,6 +267,7 @@ class MainWindow(QMainWindow):
             logging.debug(f"{self.i}: Set click function to QTest.mouseClick")
 
         closed_combobox = False
+        click_outside_modal_widget = False
         # Use this to check which click function should be used and later if additional delay is needed
         current_active_modal_widget = QApplication.activeModalWidget()
 
@@ -279,8 +280,8 @@ class MainWindow(QMainWindow):
             # Only if this is not the case we know that we clicked outside the combo box and therefore the combo box
             # should be closed, which we do with the hidePopup() function
             if recv_widget.objectName() != "qt_scrollarea_viewport":
-                logging.debug(f"{self.i}: Set click function to hidePopup")
                 click_function = self.open_combobox.hidePopup
+                logging.debug(f"{self.i}: Set click function to hidePopup")
 
             self.open_combobox = None
             closed_combobox = True
@@ -292,7 +293,12 @@ class MainWindow(QMainWindow):
                 # clicked
                 is_ancestor = current_active_modal_widget.isAncestorOf(recv_widget)
 
-                if not is_ancestor and recv_widget.objectName() != "qt_scrollarea_viewport":
+                if not is_ancestor:
+                    if recv_widget.objectName() == "qt_scrollarea_viewport":
+                        logging.debug(f"{self.i}: Warning: Not ancestor but recv_widget name is "
+                                      "'qt_scrollarea_viewport'. There was a check for that, not sure if it is causing "
+                                      "a problem.")
+                    click_outside_modal_widget = True
                     click_function = do_nothing_function
                     logging.debug(f"{self.i}: Is not an ancestor, set click function to do nothing function")
 
@@ -300,13 +306,17 @@ class MainWindow(QMainWindow):
         click_function()
         self.coverage_measurer.stop()
 
-        if isinstance(recv_widget, QComboBox) and not closed_combobox and recv_widget.count() > 0:
+        if (isinstance(recv_widget, QComboBox)
+                and not closed_combobox
+                and recv_widget.count() > 0
+                and not click_outside_modal_widget):
             # If recv_widget is a QComboBox, and we did not close a previously opened combo box, then we know that this
             # widget has to be a combo box that has just been opened. In addition, the combo box must have at least one
             # item, otherwise it will not trigger an "opening animation" and does not create the usual viewport (this
             # viewport usually contains the items of the combo box and is used as the widget which is clicked, but if
             # there are no items in the combo box, the viewport does not exist).
             self.open_combobox = recv_widget
+            logging.debug(f"{self.i}: Set open combobox to {self.open_combobox}")
 
         reward = self.calculate_coverage_increase()
 
