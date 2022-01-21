@@ -300,9 +300,12 @@ class MainWindow(QMainWindow):
         click_function()
         self.coverage_measurer.stop()
 
-        if isinstance(recv_widget, QComboBox) and not closed_combobox:
-            # If recv_widget is a QComboBox and we did not close a previously opened combo box, then we know that this
-            # widget has to be a combo box that has just been opened.
+        if isinstance(recv_widget, QComboBox) and not closed_combobox and recv_widget.count() > 0:
+            # If recv_widget is a QComboBox, and we did not close a previously opened combo box, then we know that this
+            # widget has to be a combo box that has just been opened. In addition, the combo box must have at least one
+            # item, otherwise it will not trigger an "opening animation" and does not create the usual viewport (this
+            # viewport usually contains the items of the combo box and is used as the widget which is clicked, but if
+            # there are no items in the combo box, the viewport does not exist).
             self.open_combobox = recv_widget
 
         reward = self.calculate_coverage_increase()
@@ -343,6 +346,7 @@ class MainWindow(QMainWindow):
             random_widget_list = self.currently_shown_widgets_main_window
 
         randomly_selected_widget = self.random_state.choice(random_widget_list)
+        logging.debug(f"{self.i}: Randomly selected widget '{randomly_selected_widget}'")
 
         if isinstance(randomly_selected_widget, QComboBox) and self.open_combobox is not None:
             if randomly_selected_widget == self.open_combobox:
