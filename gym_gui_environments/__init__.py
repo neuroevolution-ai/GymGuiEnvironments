@@ -1,6 +1,7 @@
-__version__ = "0.0.4"
-
+from importlib.metadata import version
 from gym.envs.registration import register
+
+__version__ = version("gym_gui_environments")
 
 register(
     id="PySideGUI-v0",

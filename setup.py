@@ -1,13 +1,13 @@
 import setuptools
 
-from gym_gui_environments import __version__ as version
-
 
 def test_font_installation():
     import subprocess
-    from gym_gui_environments.pyside_gui_environments.src.backend.text_printer import FONTS
 
-    for font in FONTS:
+    # Copied from text_printer.py to avoid import of 3rd party dependencies
+    fonts = ["DejaVu Sans", "Liberation Mono", "Nimbus Roman", "Ubuntu"]
+
+    for font in fonts:
         output = subprocess.run(["fc-match", font], capture_output=True, text=True).stdout
 
         if font not in output:
@@ -19,7 +19,7 @@ test_font_installation()
 
 setuptools.setup(
     name="gym_gui_environments",
-    version=version,
+    version="0.0.5",
     author="Patrick Deubel",
     packages=setuptools.find_packages(),
     include_package_data=True,  # Ignores package_data argument and uses files listed in MANIFEST.in instead
