@@ -123,7 +123,8 @@ class GUIEnv(gym.Env):
         if self.generate_html_report:
             logging.info("Enabled HTML report generation")
 
-        self.application_process = Process(
+        ctx = mp.get_context("spawn")
+        self.application_process = ctx.Process(
             target=self._start_application,
             args=(self.click_connection_child, self.terminate_connection_child, self.screenshot_connection_child,
                   self.generate_html_report)
