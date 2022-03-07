@@ -157,9 +157,11 @@ class GUIEnv(gym.Env):
         if log:
             logger, formatter = self.initialize_logger()
             logger.setLevel(logging.DEBUG)
-            fh = logging.FileHandler(log_file_path, "w")
-            fh.setFormatter(formatter)
-            logger.addHandler(fh)
+
+            if log_file_path is not None:
+                fh = logging.FileHandler(log_file_path, "w")
+                fh.setFormatter(formatter)
+                logger.addHandler(fh)
 
         with importlib.resources.path("gym_gui_environments.pyside_gui_environments", ".coveragerc") as resource:
             coveragerc_file_path = resource.__str__()
