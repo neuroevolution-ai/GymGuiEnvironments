@@ -1,8 +1,8 @@
-import glob
 import importlib.resources
 import logging
 import multiprocessing as mp
 import os
+import sys
 from datetime import datetime
 from multiprocessing import Process, Pipe
 from multiprocessing.connection import Connection
@@ -103,9 +103,12 @@ class RegisterClickThread(QThread):
 
 class GUIEnv(gym.Env):
 
-    def __init__(self, generate_html_report: bool = False, html_report_directory: str = None):
+    def __init__(self, generate_html_report: bool = False, html_report_directory: str = None, log: bool = False,
+                 log_file_path: str = None):
         self.generate_html_report = generate_html_report
         self.html_report_directory = html_report_directory
+        self.log = log
+        self.log_file_path = log_file_path
 
         self.click_connection_parent, self.click_connection_child = None, None
         self.terminate_connection_parent, self.terminate_connection_child = None, None
@@ -127,7 +130,7 @@ class GUIEnv(gym.Env):
         self.application_process = ctx.Process(
             target=self._start_application,
             args=(self.click_connection_child, self.terminate_connection_child, self.screenshot_connection_child,
-                  self.generate_html_report)
+                  self.generate_html_report, self.log, self.log_file_path)
         )
 
         self.application_process.start()
@@ -137,8 +140,26 @@ class GUIEnv(gym.Env):
         screenshot = take_screenshot(self.main_window.window().winId())
         self.screenshot_connection_child.send(screenshot)
 
+    @staticmethod
+    def initialize_logger():
+        logger = logging.getLogger("")
+        formatter = logging.Formatter('[%(asctime)s] - %(funcName)s - %(message)s', datefmt="%a, %d %b %Y %H:%M:%S")
+
+        sh = logging.StreamHandler(sys.stdout)
+        sh.setFormatter(formatter)
+        logger.addHandler(sh)
+
+        return logger, formatter
+
     def _start_application(self, click_connection_child: Connection, terminate_connection_child: Connection,
-                           screenshot_connection_child: Connection, generate_html_report: bool):
+                           screenshot_connection_child: Connection, generate_html_report: bool,
+                           log: bool, log_file_path: str):
+        if log:
+            logger, formatter = self.initialize_logger()
+            logger.setLevel(logging.DEBUG)
+            fh = logging.FileHandler(log_file_path, "w")
+            fh.setFormatter(formatter)
+            logger.addHandler(fh)
 
         with importlib.resources.path("gym_gui_environments.pyside_gui_environments", ".coveragerc") as resource:
             coveragerc_file_path = resource.__str__()
