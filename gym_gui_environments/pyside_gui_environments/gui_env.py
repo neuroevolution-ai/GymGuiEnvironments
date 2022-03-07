@@ -238,7 +238,7 @@ class GUIEnv(gym.Env):
 
         return x, y
 
-    def internal_step(self, action: Union[Tuple[int, int], bool]) -> Tuple[float, np.ndarray, bool, dict]:
+    def internal_step(self, action: Union[Tuple[int, int], bool]) -> Tuple[np.ndarray, float, bool, dict]:
         self.click_connection_parent.send(action)
 
         if isinstance(action, bool):
@@ -253,12 +253,12 @@ class GUIEnv(gym.Env):
         self.screenshot_connection_parent.send(increased_delay)
         observation = self.screenshot_connection_parent.recv()
 
-        return reward, observation, False, info
+        return observation, reward, False, info
 
-    def step(self, action: Tuple[int, int]) -> Tuple[float, np.ndarray, bool, dict]:
-        reward, observation, done, info = self.internal_step(action)
+    def step(self, action: Tuple[int, int]) -> Tuple[np.ndarray, float, bool, dict]:
+        observation, reward, done, info = self.internal_step(action)
 
-        return reward, observation, done, info
+        return observation, reward, done, info
 
     def reset(self):
         if self.terminate_connection_parent is not None:
@@ -287,12 +287,12 @@ class GUIEnv(gym.Env):
 
 class GUIEnvRandomClick(GUIEnv):
 
-    def step(self, action: bool = None) -> Tuple[float, np.ndarray, bool, dict]:
+    def step(self, action: bool = None) -> Tuple[np.ndarray, float, bool, dict]:
         x, y = self.sample_random_coordinates()
 
-        reward, observation, done, info = self.internal_step((x, y))
+        observation, reward, done, info = self.internal_step((x, y))
 
-        return reward, observation, done, info
+        return observation, reward, done, info
 
     @staticmethod
     def get_clicker_type():
@@ -305,23 +305,23 @@ class GUIEnvRandomWidget(GUIEnv):
         super().__init__(**kwargs)
         self.random_click_probability = random_click_probability
 
-    def step(self, action: bool = None) -> Tuple[float, np.ndarray, bool, dict]:
+    def step(self, action: bool = None) -> Tuple[np.ndarray, float, bool, dict]:
         if self.random_state.rand() < self.random_click_probability:
             # Random click
             logging.debug("Selecting random click")
             x, y = self.sample_random_coordinates()
 
-            reward, observation, done, info = self.internal_step((x, y))
+            observation, reward, done, info = self.internal_step((x, y))
 
-            return reward, observation, done, info
+            return observation, reward, done, info
         else:
             # Random widget
             logging.debug("Selecting random widget")
 
             # Info contains the selected x and y coordinates
-            reward, observation, done, info = self.internal_step(True)
+            observation, reward, done, info = self.internal_step(True)
 
-            return reward, observation, done, info
+            return observation, reward, done, info
 
     @staticmethod
     def get_clicker_type():
