@@ -19,7 +19,7 @@ test_font_installation()
 
 setuptools.setup(
     name="gym_gui_environments",
-    version="0.0.7",
+    version="0.0.8",
     author="Patrick Deubel",
     packages=setuptools.find_packages(),
     include_package_data=True,  # Ignores package_data argument and uses files listed in MANIFEST.in instead
