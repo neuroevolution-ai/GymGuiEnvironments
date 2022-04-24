@@ -40,3 +40,10 @@ interface)
   - With a probability of 1/8, the environment does a random click in the SUT, while with a probability of 7/8 it
     selects a random widget in the SUT and clicks on a random position inside this widget
   - The probability of a random click can also be changed by setting `random_click_probability=PROB` in `gym.make`
+
+
+# Bugs in PySide6
+
+During the development I encountered several bugs when using the `QTest.mouseClick()` function from PySide6.
+I filed a [bug report](https://bugreports.qt.io/browse/QTBUG-99448). If these bugs are fixed, the workarounds
+can be removed.
