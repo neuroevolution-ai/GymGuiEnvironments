@@ -19,13 +19,13 @@ test_font_installation()
 
 setuptools.setup(
     name="gym_gui_environments",
-    version="1.0.0",
+    version="1.0.1",
     author="Patrick Deubel",
     packages=setuptools.find_packages(),
     include_package_data=True,  # Ignores package_data argument and uses files listed in MANIFEST.in instead
     install_requires=[
           "wheel",
-          "gym",
+          "gym<0.24",  # TODO fix: Upwards of v0.24 changes the gym.Env API and creation of custom envs
           "pyside6",
           "coverage",
           "numpy"
